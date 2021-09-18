@@ -1,16 +1,22 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
   audioVisualizerContainer: {
     width: '100%',
-    maxWidth: 1240,
     maxHeight: 500,
     margin: 'auto',
+    backgroundColor: '#212121',
   },
   audioVisualizer: {
     width: '100%',
     height: '100%',
+    maxWidth: 1240,
+    maxHeight: 500,
+    display: 'block',
+    margin: 'auto',
+    backgroundImage:
+      'radial-gradient(circle, #EDEDED, #5980C9 10%, #2557BA 40%, #212121)',
   },
   audioPlayer: {
     width: '100%',
@@ -21,15 +27,21 @@ const useStyles = makeStyles(() => ({
 const MusicPage = () => {
   const classes = useStyles();
   const canvasRef = useRef(null);
-  const canvas = canvasRef.current;
+  const [canvas, setCanvas] = useState(canvasRef.current);
 
+  useEffect(() => {
+    setCanvas(canvasRef.current);
+  }, []);
+  
   if (canvas) {
+    console.log(canvas);
+
     let ctx = canvas.getContext('2d');
 
     let centerX = canvas.width / 2;
     let centerY = canvas.height / 2;
-    let radius = document.body.clientWidth <= 425 ? 120 : 160;
-    let steps = document.body.clientWidth <= 425 ? 60 : 120;
+    let radius =  60;
+    let steps = 60;
     let interval = 360 / steps;
     let pointsUp = [];
     let pointsDown = [];
@@ -103,8 +115,7 @@ const MusicPage = () => {
 
       // call `handleCanplay` when it music can be played
       audio.addEventListener('canplay', handleCanplay);
-      audio.src =
-        'https://s3.eu-west-2.amazonaws.com/nelsoncodepen/Audiobinger_-_The_Garden_State.mp3';
+      audio.src = 'aheadByACentury.wav';
       audio.load();
       running = true;
     }
@@ -120,7 +131,6 @@ const MusicPage = () => {
     function toggleAudio() {
       if (running === false) {
         loadAudio();
-        document.querySelector('.call-to-action').remove();
       }
 
       if (audio.paused) {
@@ -229,10 +239,7 @@ const MusicPage = () => {
 
   return (
     <div className={classes.audioVisualizerContainer}>
-      <canvas ref={canvasRef} className={classes.audioVisualizer} />
-      <audio controls preload="auto" className={classes.audioPlayer}>
-        <source src="aheadByACentury.wav" type="audio/mpeg" />
-      </audio>
+      <canvas ref={canvasRef} className={classes.audioVisualizer} width="640" height="260" />
     </div>
   );
 };
