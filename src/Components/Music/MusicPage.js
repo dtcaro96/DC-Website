@@ -32,7 +32,7 @@ const MusicPage = () => {
   useEffect(() => {
     setCanvas(canvasRef.current);
   }, []);
-  
+
   if (canvas) {
     console.log(canvas);
 
@@ -40,7 +40,7 @@ const MusicPage = () => {
 
     let centerX = canvas.width / 2;
     let centerY = canvas.height / 2;
-    let radius =  60;
+    let radius = 60;
     let steps = 60;
     let interval = 360 / steps;
     let pointsUp = [];
@@ -70,13 +70,13 @@ const MusicPage = () => {
         x:
           centerX +
           radius *
-            Math.cos(((-angle + angleExtra + 5) * Math.PI) / 180) *
-            distDown,
+          Math.cos(((-angle + angleExtra + 5) * Math.PI) / 180) *
+          distDown,
         y:
           centerY +
           radius *
-            Math.sin(((-angle + angleExtra + 5) * Math.PI) / 180) *
-            distDown,
+          Math.sin(((-angle + angleExtra + 5) * Math.PI) / 180) *
+          distDown,
         dist: distDown,
       });
     }
@@ -108,7 +108,7 @@ const MusicPage = () => {
     // Make a audio node
     const audio = new Audio();
 
-    function loadAudio() {
+    function loadAudio () {
       audio.loop = false;
       audio.autoplay = false;
       audio.crossOrigin = 'anonymous';
@@ -120,7 +120,7 @@ const MusicPage = () => {
       running = true;
     }
 
-    function handleCanplay() {
+    function handleCanplay () {
       // connect the audio element to the analyser node and the analyser node
       // to the main Web Audio context
       const source = context.createMediaElementSource(audio);
@@ -128,7 +128,7 @@ const MusicPage = () => {
       splitter.connect(context.destination);
     }
 
-    function toggleAudio() {
+    function toggleAudio () {
       if (running === false) {
         loadAudio();
       }
@@ -150,7 +150,7 @@ const MusicPage = () => {
     // Canvas stuff
     // -------------
 
-    function drawLine(points) {
+    function drawLine (points) {
       let origin = points[0];
 
       ctx.beginPath();
@@ -166,7 +166,7 @@ const MusicPage = () => {
       ctx.stroke();
     }
 
-    function connectPoints(pointsA, pointsB) {
+    function connectPoints (pointsA, pointsB) {
       for (let i = 0; i < pointsA.length; i++) {
         ctx.beginPath();
         ctx.strokeStyle = 'rgba(255,255,255,0.5)';
@@ -176,7 +176,7 @@ const MusicPage = () => {
       }
     }
 
-    function update(dt) {
+    function update (dt) {
       let audioIndex, audioValue;
 
       // get the current audio data
@@ -193,13 +193,13 @@ const MusicPage = () => {
         pointsUp[i].x =
           centerX +
           radius *
-            Math.cos((-pointsUp[i].angle * Math.PI) / 180) *
-            pointsUp[i].dist;
+          Math.cos((-pointsUp[i].angle * Math.PI) / 180) *
+          pointsUp[i].dist;
         pointsUp[i].y =
           centerY +
           radius *
-            Math.sin((-pointsUp[i].angle * Math.PI) / 180) *
-            pointsUp[i].dist;
+          Math.sin((-pointsUp[i].angle * Math.PI) / 180) *
+          pointsUp[i].dist;
 
         audioIndex =
           Math.ceil(pointsDown[i].angle * (bufferLengthR / (pCircle * 2))) | 0;
@@ -210,17 +210,17 @@ const MusicPage = () => {
         pointsDown[i].x =
           centerX +
           radius *
-            Math.cos((-pointsDown[i].angle * Math.PI) / 180) *
-            pointsDown[i].dist;
+          Math.cos((-pointsDown[i].angle * Math.PI) / 180) *
+          pointsDown[i].dist;
         pointsDown[i].y =
           centerY +
           radius *
-            Math.sin((-pointsDown[i].angle * Math.PI) / 180) *
-            pointsDown[i].dist;
+          Math.sin((-pointsDown[i].angle * Math.PI) / 180) *
+          pointsDown[i].dist;
       }
     }
 
-    function draw(dt) {
+    function draw (dt) {
       requestAnimationFrame(draw);
 
       if (running) {

@@ -10,12 +10,15 @@ import {
   BrowserRouter as Router,
 } from 'react-router-dom';
 
+
+
 const useStyles = makeStyles((theme) => ({
   root: {
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
     height: '100vh',
+    backgroundColor: theme.palette.main.primary
   },
   page: {
     width: '100%',
@@ -23,6 +26,8 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
   },
 }));
+
+
 
 const App = () => {
   const classes = useStyles();

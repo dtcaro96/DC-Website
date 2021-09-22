@@ -21,8 +21,9 @@ const useStyles = makeStyles((theme) => ({
   },
   appbar: {
     zIndex: 1,
+    color: theme.palette.main.darkText,
     height: '4rem',
-    backgroundColor: '#212121',
+    backgroundColor: theme.palette.main.secondary,
     justifyContent: 'center',
     boxShadow: '0px 5px 30px black',
     [theme.breakpoints.down('xs')]: {
@@ -56,9 +57,12 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  link: {
+    textDecoration: 'none',
+  }
 }));
 
-export default function NavbarMain() {
+export default function NavbarMain () {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
@@ -85,16 +89,16 @@ export default function NavbarMain() {
           <Typography variant="h5" className={classes.title}>
             Daniel Caro
           </Typography>
-          <Link to="/" >
+          <Link to="/" className={classes.link}>
             <Button className={classes.button} color="inherit">
               Home
             </Button>
           </Link>
-          <Link to="/music">
+          <Link to="/music" className={classes.link}>
             <Button className={classes.button} color="inherit">
               Music
             </Button>
-          </Link>
+          </Link >
           <Button className={classes.button} color="inherit">
             About
           </Button>
@@ -126,12 +130,20 @@ export default function NavbarMain() {
         <List className={classes.drawer}>
           <ListItem>
             <ListItemText>
-              <Button>Home</Button>
+              <Link to="/" className={classes.link}>
+                <Button >
+                  Home
+                </Button>
+              </Link >
             </ListItemText>
           </ListItem>
           <ListItem>
             <ListItemText>
-              <Button>Music</Button>
+              <Link to="/music" className={classes.link}>
+                <Button >
+                  Music
+                </Button>
+              </Link >
             </ListItemText>
           </ListItem>
           <ListItem>

@@ -12,19 +12,18 @@ const useStyles = makeStyles((theme) => ({
   },
   photoContainer: {
     width: '100%',
-    maxHeight: 500,
-    backgroundColor: '#212121',
+    backgroundColor: 'inherit',
   },
   photo: {
     width: '100%',
-    maxWidth: 1240,
-    maxHeight: 500,
+    maxWidth: 1204,
+    maxHeight: 804,
     margin: 'auto',
     display: 'block',
   },
 }));
 
-export default function HomePage() {
+export default function HomePage () {
   const classes = useStyles();
   return (
     <div className={classes.photoContainer}>
