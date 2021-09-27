@@ -21,11 +21,10 @@ const useStyles = makeStyles((theme) => ({
   },
   appbar: {
     zIndex: 1,
-    color: theme.palette.main.darkText,
+    color: theme.palette.main.lightText,
     height: '4rem',
     backgroundColor: theme.palette.main.secondary,
     justifyContent: 'center',
-    boxShadow: '0px 5px 30px black',
     [theme.breakpoints.down('xs')]: {
       height: '4rem',
     },
@@ -47,11 +46,14 @@ const useStyles = makeStyles((theme) => ({
   },
   miniToolbar: {
     height: '4rem',
-    backgroundColor: '#212121',
-    color: '#fff',
+    backgroundColor: theme.palette.main.secondary,
+    color: theme.palette.main.lightText,
+  },
+  drawer: {
+    backgroundColor: theme.palette.main.primary
   },
   button: {
-    color: 'white',
+    color: theme.palette.main.lightText,
     textDecoration: 'none',
     [theme.breakpoints.down('xs')]: {
       display: 'none',
@@ -59,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
   },
   link: {
     textDecoration: 'none',
+    '& button': {
+      color: theme.palette.main.lightText
+    }
   }
 }));
 
@@ -75,7 +80,7 @@ export default function NavbarMain () {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" className={classes.appbar}>
+      <AppBar elevation={0} position="fixed" className={classes.appbar}>
         <Toolbar>
           <IconButton
             edge="start"
@@ -90,19 +95,21 @@ export default function NavbarMain () {
             Daniel Caro
           </Typography>
           <Link to="/" className={classes.link}>
-            <Button className={classes.button} color="inherit">
+            <Button className={classes.button}>
               Home
             </Button>
           </Link>
           <Link to="/music" className={classes.link}>
-            <Button className={classes.button} color="inherit">
+            <Button className={classes.button}>
               Music
             </Button>
           </Link >
-          <Button className={classes.button} color="inherit">
-            About
-          </Button>
-          <Button className={classes.button} color="inherit">
+          <Link to="/about" className={classes.link}>
+            <Button className={classes.button}>
+              About
+            </Button>
+          </Link >
+          <Button className={classes.button}>
             Contact
           </Button>
         </Toolbar>
@@ -126,12 +133,11 @@ export default function NavbarMain () {
             Daniel Caro
           </Typography>
         </Toolbar>
-        <Divider />
         <List className={classes.drawer}>
           <ListItem>
             <ListItemText>
               <Link to="/" className={classes.link}>
-                <Button >
+                <Button onClick={handleAccordianClose}>
                   Home
                 </Button>
               </Link >
@@ -140,7 +146,7 @@ export default function NavbarMain () {
           <ListItem>
             <ListItemText>
               <Link to="/music" className={classes.link}>
-                <Button >
+                <Button onClick={handleAccordianClose}>
                   Music
                 </Button>
               </Link >
@@ -148,12 +154,16 @@ export default function NavbarMain () {
           </ListItem>
           <ListItem>
             <ListItemText>
-              <Button>About</Button>
+              <Link to='/about' className={classes.link}>
+                <Button onClick={handleAccordianClose}>About</Button>
+              </Link>
             </ListItemText>
           </ListItem>
           <ListItem>
             <ListItemText>
-              <Button>Contact</Button>
+              <Link to='/contact' className={classes.link}>
+                <Button onClick={handleAccordianClose}>Contact</Button>
+              </Link>
             </ListItemText>
           </ListItem>
         </List>

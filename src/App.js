@@ -2,6 +2,7 @@ import React from 'react';
 import '@fontsource/roboto';
 import HomePage from './Components/HomePage';
 import NavbarMain from './Components/NavbarMain';
+import Footer from './Components/Footer';
 import MusicPage from './Components/Music/MusicPage';
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    height: '100vh',
+    height: '100%',
     backgroundColor: theme.palette.main.primary
   },
   page: {
@@ -25,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
     margin: 0,
     padding: 0,
   },
+  NavbarMain: {
+    shadows: ['none']
+  }
 }));
 
 
@@ -37,7 +41,7 @@ const App = () => {
       <div className={classes.root}>
         <Route>
           {/* // maxWidth on Container is set to false to stop MaterialUI from auto-enforcing a max-width */}
-          <NavbarMain />
+          <NavbarMain className={classes.NavbarMain} />
           <Switch>
             <Route
               exact
@@ -49,6 +53,7 @@ const App = () => {
               <MusicPage />
             </Route>
           </Switch>
+          <Footer />
         </Route>
       </div>
     </Router>
