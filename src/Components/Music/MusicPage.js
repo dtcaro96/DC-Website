@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
+  root: {
+    height: '100vh',
+  },
   audioVisualizerContainer: {
     width: '100%',
     maxHeight: 500,
@@ -31,7 +34,7 @@ const MusicPage = () => {
 
   useEffect(() => {
     setCanvas(canvasRef.current);
-  }, []);
+  }, scrollTo(0, 0), []);
 
   if (canvas) {
     console.log(canvas);
@@ -238,9 +241,13 @@ const MusicPage = () => {
   }
 
   return (
-    <div className={classes.audioVisualizerContainer}>
-      <canvas ref={canvasRef} className={classes.audioVisualizer} width="640" height="260" />
+    <div className={classes.root}>
+      <div className={classes.audioVisualizerContainer}>
+        <canvas ref={canvasRef} className={classes.audioVisualizer} width="640" height="260" />
+        <iframe src="https://open.spotify.com/embed/album/6bQNs64FVwSU0M7TxgbbVl" width="100%" height="280" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
     </div>
+
   );
 };
 

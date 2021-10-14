@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect, useHistory } from 'react';
 import '@fontsource/roboto';
 import HomePage from './Components/HomePage';
 import NavbarMain from './Components/NavbarMain';
+import AboutPage from './Components/AboutPage';
+import ContactPage from './Components/ContactPage';
 import Footer from './Components/Footer';
 import MusicPage from './Components/Music/MusicPage';
 import { makeStyles } from '@material-ui/core/styles';
@@ -28,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
   },
   NavbarMain: {
     shadows: ['none']
+  },
+  footer: {
   }
 }));
 
@@ -35,7 +39,9 @@ const useStyles = makeStyles((theme) => ({
 
 const App = () => {
   const classes = useStyles();
-
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <Router>
       <div className={classes.root}>
@@ -48,12 +54,27 @@ const App = () => {
               path="/"
               render={() => <HomePage className={classes.page} />}
             ></Route>
-            <Route exact path="/about" render={() => <h1>Hello</h1>}></Route>
-            <Route exact path="/music">
-              <MusicPage />
+            <Route
+              exact
+              path="/about"
+              render={() => <AboutPage className={classes.page} />}>
+            </Route>
+            <Route
+              exact
+              path="/music"
+              render={() => <MusicPage className={classes.page} />}>
+            </Route>
+            <Route
+              exact
+              path="/contact"
+              render={() => <ContactPage className={classes.page} />}>
+            </Route>
+            <Route
+              render={() => <HomePage className={classes.page} />}
+            >
             </Route>
           </Switch>
-          <Footer />
+          <Footer className={classes.footer} />
         </Route>
       </div>
     </Router>

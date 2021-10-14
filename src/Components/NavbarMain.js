@@ -109,9 +109,11 @@ export default function NavbarMain () {
               About
             </Button>
           </Link >
-          <Button className={classes.button}>
-            Contact
-          </Button>
+          <Link to="/contact" className={classes.link}>
+            <Button className={classes.button}>
+              Contact
+            </Button>
+          </Link >
         </Toolbar>
       </AppBar>
       <Drawer
