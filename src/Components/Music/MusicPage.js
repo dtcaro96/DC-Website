@@ -3,7 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(() => ({
   root: {
-    height: '100vh',
+    height: 'calc(100vh - 114px)',
+    fontFamily: 'Roboto Mono, monospace',
   },
   audioVisualizerContainer: {
     width: '100%',

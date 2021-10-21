@@ -12,9 +12,15 @@ const theme = createTheme({
         main: {
             primary: '#da627d',
             secondary: '#a53860',
+            lightPrimary: '#ed8494',
+            darkPrimary: '#c14e70',
             darkText: '#450920',
+            medText: '#762141',
             lightText: '#f9dbbd',
-            thirdary: '#ffa5ab'
+            lightMedText: '#fbceb9',
+            lightMedMedText: '#fcc0b4',
+            thirdary: '#ffa5ab',
+
         }
     }
 });
@@ -22,7 +28,7 @@ const theme = createTheme({
 
 ReactDOM.render(
     (<MuiThemeProvider theme={theme}>
-        <App title={title} />
+        <App title={title} style='height:100%;' />
     </MuiThemeProvider>),
     document.getElementById('app')
 );

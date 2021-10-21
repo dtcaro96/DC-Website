@@ -9,7 +9,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from 'react-router-dom';
@@ -22,12 +21,9 @@ const useStyles = makeStyles((theme) => ({
   appbar: {
     zIndex: 1,
     color: theme.palette.main.lightText,
-    height: '4rem',
+    height: '64px',
     backgroundColor: theme.palette.main.secondary,
-    justifyContent: 'center',
-    [theme.breakpoints.down('xs')]: {
-      height: '4rem',
-    },
+    justifyContent: 'center'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -43,6 +39,8 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     lineHeight: 1.5,
     textTransform: 'uppercase',
+    textDecoration: 'none',
+    color: theme.palette.main.lightText
   },
   miniToolbar: {
     height: '4rem',
@@ -91,9 +89,9 @@ export default function NavbarMain () {
           >
             <ExpandMoreIcon />
           </IconButton>
-          <Typography variant="h5" className={classes.title}>
+          <Link to="/" className={classes.title}>
             Daniel Caro
-          </Typography>
+          </Link>
           <Link to="/" className={classes.link}>
             <Button className={classes.button}>
               Home
