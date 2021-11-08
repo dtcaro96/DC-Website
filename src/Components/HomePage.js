@@ -22,8 +22,13 @@ const useStyles = makeStyles((theme) => ({
   },
   photo: {
     width: '100%',
+    maxWidth: '1438px',
     margin: 'auto',
     display: 'block',
+    marginTop: '2rem',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '0'
+    },
   },
   aboutHeader: {
     fontFamily: 'inherit',

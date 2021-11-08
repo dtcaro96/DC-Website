@@ -102,9 +102,9 @@ export default function NavbarMain () {
               Music
             </Button>
           </Link >
-          <Link to="/about" className={classes.link}>
+          <Link to="/audio" className={classes.link}>
             <Button className={classes.button}>
-              About
+              Audio
             </Button>
           </Link >
           <Link to="/contact" className={classes.link}>
@@ -154,8 +154,8 @@ export default function NavbarMain () {
           </ListItem>
           <ListItem>
             <ListItemText>
-              <Link to='/about' className={classes.link}>
-                <Button onClick={handleAccordianClose}>About</Button>
+              <Link to='/audio' className={classes.link}>
+                <Button onClick={handleAccordianClose}>Audio</Button>
               </Link>
             </ListItemText>
           </ListItem>

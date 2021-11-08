@@ -2,10 +2,11 @@ import React, { useEffect, useHistory } from 'react';
 import '@fontsource/roboto';
 import HomePage from './Components/HomePage';
 import NavbarMain from './Components/NavbarMain';
-import AboutPage from './Components/AboutPage';
+import AudioPage from './Components/AudioPage';
 import ContactPage from './Components/ContactPage';
 import Footer from './Components/Footer';
 import MusicPage from './Components/Music/MusicPage';
+import MusicPagewithPlayer from './Components/Music/MusicPagewithPlayer';
 import { makeStyles } from '@material-ui/core/styles';
 import {
   Switch,
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     minHeight: '100vh',
   },
   NavbarMain: {
-    shadows: ['none']
+    shadows: 'none'
   },
   footer: {
     position: 'fixed',
@@ -64,8 +65,8 @@ const App = () => {
             ></Route>
             <Route
               exact
-              path="/about"
-              render={() => <AboutPage className={classes.page} />}>
+              path="/audio"
+              render={() => <AudioPage className={classes.page} />}>
             </Route>
             <Route
               exact
