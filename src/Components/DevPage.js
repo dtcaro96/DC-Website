@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { LocalGroceryStore } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -120,29 +121,61 @@ const useStyles = makeStyles((theme) => ({
 
         }
     },
+    logoContainer: {
+        display: 'flex',
+        justifyContent: 'center',
+        width: '100%',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        borderTop: `1px solid ${theme.palette.main.lightText}`,
+
+    },
+    reactLogo: {
+        maxWidth: '90px',
+        marginRight: '1rem',
+        [theme.breakpoints.up('xs')]: {
+            width: '50px',
+            marginTop: '1rem'
+        },
+        [theme.breakpoints.up('sm')]: {
+            width: '55px'
+        },
+        [theme.breakpoints.up('md')]: {
+            width: '65px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: '80px'
+        },
+        [theme.breakpoints.up('xl')]: {
+
+        }
+    }
 }));
 
-export default function AboutPage () {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+export default function DevPage () {
     const classes = useStyles();
     return (
         <div className={classes.root}>
             <div className={classes.info}>
-                <Typography className={classes.infoHeader} variant='h3'>Audio</Typography>
+                <Typography className={classes.infoHeader} variant='h3'>Dev</Typography>
                 <div className={classes.subjectContainer}>
-                    <Typography className={classes.subjectHeader} variant='h2'>Production</Typography>
+                    <Typography className={classes.subjectHeader} variant='h2'>Enthusiastic About Tech...</Typography>
                     <p className={classes.subjectParagraph}>
                         lorem ipsum dolor sit amet, consectetur t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look
                     </p>
 
                 </div>
-                <div className={classes.subjectContainer}>
-                    <Typography className={classes.subjectHeader} variant='h2'>Live Sound</Typography>
-                    <p className={classes.subjectParagraph}>
-                        lorem ipsum dolor sit amet, consectetur t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look
-                    </p>
+
+                <div className={classes.logoContainer}>
+                    <img className={classes.reactLogo} src='pics\React_Logo.png' />
+                    <img className={classes.reactLogo} src='pics\JS_Logo.png' />
+                    <img className={classes.reactLogo} src='pics\CSS_Logo.png' />
+                    <img className={classes.reactLogo} src='pics\MongoDB_Logo.png' />
+                    <img className={classes.reactLogo} src='pics\HTML_Logo.png' />
+                    <img className={classes.reactLogo} src='pics\Node_Logo.png' />
+                    <img className={classes.reactLogo} src='pics\Python_Logo.png' />
+                    <img className={classes.reactLogo} src='pics\Bootstrap_Logo.png' />
+                    <img className={classes.reactLogo} src='pics\MUI_Logo.png' />
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@ import AudioPage from './Components/AudioPage';
 import ContactPage from './Components/ContactPage';
 import Footer from './Components/Footer';
 import MusicPage from './Components/Music/MusicPage';
+import DevPage from './Components/DevPage'
 import MusicPagewithPlayer from './Components/Music/MusicPagewithPlayer';
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -72,6 +73,11 @@ const App = () => {
               exact
               path="/music"
               render={() => <MusicPage className={classes.page} />}>
+            </Route>
+            <Route
+              exact
+              path="/dev"
+              render={() => <DevPage className={classes.page} />}>
             </Route>
             <Route
               exact

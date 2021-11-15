@@ -48,7 +48,8 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.main.lightText,
   },
   drawer: {
-    backgroundColor: theme.palette.main.primary
+    backgroundColor: theme.palette.main.primary,
+
   },
   button: {
     color: theme.palette.main.lightText,
@@ -57,11 +58,20 @@ const useStyles = makeStyles((theme) => ({
       display: 'none',
     },
   },
+  buttonBox: {
+    display: 'flex',
+    alignItems: 'space-evenly',
+    justifyContent: 'space-evenly',
+
+  },
   link: {
     textDecoration: 'none',
     '& button': {
       color: theme.palette.main.lightText
     }
+  },
+  drawerButton: {
+    justifyContent: 'start'
   }
 }));
 
@@ -92,26 +102,33 @@ export default function NavbarMain () {
           <Link to="/" className={classes.title}>
             Daniel Caro
           </Link>
-          <Link to="/" className={classes.link}>
-            <Button className={classes.button}>
-              Home
-            </Button>
-          </Link>
-          <Link to="/music" className={classes.link}>
-            <Button className={classes.button}>
-              Music
-            </Button>
-          </Link >
-          <Link to="/audio" className={classes.link}>
-            <Button className={classes.button}>
-              Audio
-            </Button>
-          </Link >
-          <Link to="/contact" className={classes.link}>
-            <Button className={classes.button}>
-              Contact
-            </Button>
-          </Link >
+          <div className={classes.buttonBox}>
+            <Link to="/" className={classes.link}>
+              <Button className={classes.button}>
+                Home
+              </Button>
+            </Link>
+            <Link to="/music" className={classes.link}>
+              <Button className={classes.button}>
+                Music
+              </Button>
+            </Link >
+            <Link to="/audio" className={classes.link}>
+              <Button className={classes.button}>
+                Audio
+              </Button>
+            </Link >
+            <Link to="/dev" className={classes.link}>
+              <Button className={classes.button}>
+                Dev
+              </Button>
+            </Link >
+            <Link to="/contact" className={classes.link}>
+              <Button className={classes.button}>
+                Contact
+              </Button>
+            </Link >
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -137,7 +154,7 @@ export default function NavbarMain () {
           <ListItem>
             <ListItemText>
               <Link to="/" className={classes.link}>
-                <Button onClick={handleAccordianClose}>
+                <Button className={classes.drawerButton} onClick={handleAccordianClose}>
                   Home
                 </Button>
               </Link >
@@ -146,7 +163,7 @@ export default function NavbarMain () {
           <ListItem>
             <ListItemText>
               <Link to="/music" className={classes.link}>
-                <Button onClick={handleAccordianClose}>
+                <Button className={classes.drawerButton} onClick={handleAccordianClose}>
                   Music
                 </Button>
               </Link >
@@ -155,14 +172,21 @@ export default function NavbarMain () {
           <ListItem>
             <ListItemText>
               <Link to='/audio' className={classes.link}>
-                <Button onClick={handleAccordianClose}>Audio</Button>
+                <Button className={classes.drawerButton} onClick={handleAccordianClose}>Audio</Button>
+              </Link>
+            </ListItemText>
+          </ListItem>
+          <ListItem>
+            <ListItemText>
+              <Link to='/dev' className={classes.link}>
+                <Button className={classes.drawerButton} onClick={handleAccordianClose}>Dev</Button>
               </Link>
             </ListItemText>
           </ListItem>
           <ListItem>
             <ListItemText>
               <Link to='/contact' className={classes.link}>
-                <Button onClick={handleAccordianClose}>Contact</Button>
+                <Button className={classes.drawerButton} onClick={handleAccordianClose}>Contact</Button>
               </Link>
             </ListItemText>
           </ListItem>

@@ -285,7 +285,7 @@ export default function HomePage () {
             </Typography>
           </CardContent>
           <CardActions>
-            <Link className={classes.buttonLink} exact to='/music'>
+            <Link className={classes.buttonLink} exact to='/audio'>
               <Button className={classes.cardButton} size="small">See Audio</Button>
             </Link>
           </CardActions>
@@ -299,14 +299,16 @@ export default function HomePage () {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Development
+              Dev
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Currently studying and practicing front-end development with some back-end technologies including Express, React, MongoDB and some others. Feel free to look at some of my projects here.
             </Typography>
           </CardContent>
           <CardActions>
-            <Button className={classes.cardButton} size="small">Learn More</Button>
+            <Link className={classes.buttonLink} exact to='/dev'>
+              <Button className={classes.cardButton} size="small">Learn More</Button>
+            </Link>
           </CardActions>
         </Card>
         <Card className={classes.card}>

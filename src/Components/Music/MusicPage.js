@@ -474,7 +474,16 @@ const MusicPage = () => {
       <div className={classes.info}>
         <Typography className={classes.infoHeader} variant='h3'>Music</Typography>
         <p className={classes.infoParagraph}>
-          lorem ipsum dolor sit amet, consectetur t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look
+          All my life I've been playing music, performing in groups, recording, learning new instruments. I've played in groups ranging from jazz combos to acapella groups to rock & metal bands and continue to explore new avenues of music.
+          <br />
+          <br />
+          Starting in the fourth grade, I started on the trombone in band class and eventually learned the bass the year after. After playing bass in band, I picked up the guitar, as it was pretty easy to translate. This started the downward spiral into my obsession with rock and metal music.After discovering Metallica in 7th grade, I constantly was exploring challenging myself when it came to my playing and eventually songwriting. In tenth grade, I saved up enough money in order to buy my first drum kit and taught myself drums, listening and playing along to my favorite tracks.
+          <br />
+          <br />
+          As I was approaching the end of my days in high school, I had decided that I wanted to pursue music professionally and/or ultimately keep being involved in it the rest of my life. I started to visit and apply to colleges and ended up at SUNY Purchase College. It was here that I began to thrive musically, being surrounded by talent of all sorts and people really enthusiastic about the arts. I joined a bunch of bands, recorded some albums with them, and played a ton of shows around the area.
+          <br />
+          <br />
+          Currently I continue to play in bands and record music. I even have my first studio E.P. completely written and performed by myself finished and am looking forward to releasing it. Check out some of the projects I've been a part of below!
         </p>
         <div className={classes.buttonContainer}>
           <button className={currentBand === 'havenfield' ? classes.activeButton : classes.button} value='havenfield' onClick={handleClick}>
@@ -496,7 +505,10 @@ const MusicPage = () => {
         <div className={currentBand === 'havenfield' ? classes.havenfieldContainer : classes.noShow}>
           <div className={classes.bandInfoLeft}>
             <h2 className={classes.bandHeader}>Alt Rock/Emo for The Angsty</h2>
-            <p className={classes.bandInfo}>lorem ipsum dolor sit amet, consectetur t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as th </p>
+            <p className={classes.bandInfo}>
+              I joined Havenfield in early 2015 on the drums, the first group I got to play the drums in. After our singer released the first E.P. that spring, we started to write music as a band and prep for recording. After playing a multitude of shows around the north-east, we recorded our debut fully collaborative E.P, Color in summer 2016. We continued to play shows up until early 2018 where we played our final show. I really miss this band.
+            </p>
+
           </div>
           <div className={classes.bandInfoRight}>
             <iframe className={classes.iframe} src="https://open.spotify.com/embed/track/3365noetXZaJT41r5YfOA2" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -519,7 +531,7 @@ const MusicPage = () => {
         <div className={currentBand === 'the good few' ? classes.theGoodFewContainer : classes.noShow}>
           <div className={classes.bandInfoLeft}>
             <h2 className={classes.bandHeader}>Fun Pop Rock with an Edge</h2>
-            <p className={classes.bandInfo}>lorem ipsum dolor sit amet, consectetur t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as th </p>
+            <p className={classes.bandInfo}>This band has been a band for quite some time, but after a long pandemic, they were looking to play some shows again with a new line-up. After being asked to play guitar for their first show back, we played at Berlin Under A in the East Village to a packed house. Looking forward to playing with this group more!</p>
           </div>
           <div className={classes.bandInfoRight}>
             <iframe className={classes.iframe} src="https://open.spotify.com/embed/track/3P6Li3rR7th5UUigpOhlbc" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -542,7 +554,7 @@ const MusicPage = () => {
         <div className={currentBand === 'poor choice' ? classes.poorChoiceContainer : classes.noShow}>
           <div className={classes.bandInfoLeft}>
             <h2 className={classes.bandHeader}>Long Island Hardcore</h2>
-            <p className={classes.bandInfo}>lorem ipsum dolor sit amet, consectetur t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as th </p>
+            <p className={classes.bandInfo}>What started as a punk/emo project from Long Island legend Gerry Windus, I met Gerry at school and joined what was originally called Bedmakers. After solidifying our line-up and recording some new heavier music, we released our debut E.P, Subject 2 Hate in summer 2018. We played some great hardcore bands including Madball, Show Me The Body, SeeYouSpaceCowboy and a bunch of others. The project fizzled out after the pandemic took place.</p>
           </div>
           <div className={classes.bandInfoRight}>
             <iframe className={classes.iframe} src="https://open.spotify.com/embed/track/2LRFyrLbBS02MjumU1Mrwn" width="100%" height="80" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -565,7 +577,7 @@ const MusicPage = () => {
         <div className={currentBand === 'big nitro' ? classes.bigNitroContainer : classes.noShow}>
           <div className={classes.bandInfoLeft}>
             <h2 className={classes.bandHeader}>90's-Esque Power Pop Rock</h2>
-            <p className={classes.bandInfo}>lorem ipsum dolor sit amet, consectetur t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as th </p>
+            <p className={classes.bandInfo}>This is my first project where the music is solely written, performed, and recorded by myself. I had the most fun creating this E.P. and I'm so excited to show it to the world. Hoping to get a band together and play some shows once the release is done! I hope you like rock music.</p>
           </div>
           <div className={classes.bandInfoRight}>
             <h2 className={classes.bandHeader}>Music Coming Soon!</h2>
