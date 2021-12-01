@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -12,68 +11,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import { Link } from 'react-router-dom';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    height: '4rem',
-  },
-  appbar: {
-    zIndex: 1,
-    color: theme.palette.main.lightText,
-    height: '64px',
-    backgroundColor: theme.palette.main.secondary,
-    justifyContent: 'center'
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    display: 'none',
-    [theme.breakpoints.down('xs')]: {
-      display: 'flex',
-    },
-  },
-  title: {
-    flexGrow: 1,
-    fontFamily: 'Roboto Mono, monospace',
-    fontSize: '1.5rem',
-    fontWeight: 400,
-    lineHeight: 1.5,
-    textTransform: 'uppercase',
-    textDecoration: 'none',
-    color: theme.palette.main.lightText
-  },
-  miniToolbar: {
-    height: '4rem',
-    backgroundColor: theme.palette.main.secondary,
-    color: theme.palette.main.lightText,
-  },
-  drawer: {
-    backgroundColor: theme.palette.main.primary,
-
-  },
-  button: {
-    color: theme.palette.main.lightText,
-    textDecoration: 'none',
-    [theme.breakpoints.down('xs')]: {
-      display: 'none',
-    },
-  },
-  buttonBox: {
-    display: 'flex',
-    alignItems: 'space-evenly',
-    justifyContent: 'space-evenly',
-
-  },
-  link: {
-    textDecoration: 'none',
-    '& button': {
-      color: theme.palette.main.lightText
-    }
-  },
-  drawerButton: {
-    justifyContent: 'start'
-  }
-}));
+import { useStyles } from '../Styles/NavbarMainStyles'
 
 export default function NavbarMain () {
   const classes = useStyles();
@@ -100,7 +38,7 @@ export default function NavbarMain () {
             <ExpandMoreIcon />
           </IconButton>
           <Link to="/" className={classes.title}>
-            Daniel Caro
+            Danny Caro
           </Link>
           <div className={classes.buttonBox}>
             <Link to="/" className={classes.link}>
@@ -147,7 +85,7 @@ export default function NavbarMain () {
             <ExpandLessIcon />
           </IconButton>
           <Typography variant="h5" className={classes.title}>
-            Daniel Caro
+            Danny Caro
           </Typography>
         </Toolbar>
         <List className={classes.drawer}>

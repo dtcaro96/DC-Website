@@ -5,53 +5,25 @@ import NavbarMain from './Components/NavbarMain';
 import AudioPage from './Components/AudioPage';
 import ContactPage from './Components/ContactPage';
 import Footer from './Components/Footer';
-import MusicPage from './Components/Music/MusicPage';
+import MusicPage from './Components/MusicPage';
 import DevPage from './Components/DevPage'
-import MusicPagewithPlayer from './Components/Music/MusicPagewithPlayer';
-import { makeStyles } from '@material-ui/core/styles';
 import {
   Switch,
   Route,
   BrowserRouter as Router,
 } from 'react-router-dom';
-
-
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    minHeight: '100vh',
-    margin: 'none',
-    padding: 'none',
-    backgroundColor: theme.palette.main.primary
-  },
-  page: {
-    width: '100%',
-    margin: 0,
-    padding: 0,
-    minHeight: '100vh',
-  },
-  NavbarMain: {
-    shadows: 'none'
-  },
-  footer: {
-    position: 'fixed',
-    bottom: '0',
-    width: '100%',
-    height: '50px'
-  },
-
-}));
-
-
+import { useStyles } from './Styles/AppStyles';
 
 const App = () => {
+
+  //useStyles applies styles to components via classes
   const classes = useStyles();
+
+  //This allows the view to be at the top of window when loading a new page
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
   return (
     <Router>
       <div className={classes.root}>
