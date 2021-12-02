@@ -17,7 +17,17 @@ export default function DevPage () {
                 <div className={classes.subjectContainer}>
                     <Typography className={classes.subjectHeader} variant='h2'>Enthusiastic About Tech...</Typography>
                     <p className={classes.subjectParagraph}>
-                        lorem ipsum dolor sit amet, consectetur t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look
+                        As I sparked a passion in software and web development, In April of 2021, I decided to leave my job in I.T. in order to full-time study and pursue a career in software.
+                        <br />
+                        <br />
+                        During my time at my I.T. job, I discovered how important an efficient and user-friendly product/tool and was in order to streamline processes in tech infrastructure. I realized I wanted to be part of a team that brought these products to fruition and I decided to go into that direction.
+                        <br />
+                        <br />
+                        As soon as I left, I started diving into a few online courses where I got to get my hands dirty with basic HTML, CSS, and Javascript, your basic web dev tools. Eventually when I felt comfortable with the basics I moved into some more complex frameworks and tools including React, Axios, API's, Material-UI, Bootstrap, MongoDB and also some backend technologies including REST concepts, Webpack, NodeJS and Express. I still continue to use my time to learn more and build upon the basic foundations of what I've learned so far.
+                        <br />
+                        <br />
+                        As I've been learning, I've been working on projects of my own including this website, which is completely responsive! I absolutely love development and I'm super excited to break into the industry myself and learn more about the behind-the-scenes of software engineering. I can't wait to share more as I progress :)
+
                     </p>
 
                 </div>
