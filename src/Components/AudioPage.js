@@ -25,7 +25,7 @@ export default function AboutPage () {
                         My current hardware includes: 13inch HP Spectre x360 w/ 16GB RAM and Intel Core i7 10th Gen, 2 x Adam Audio T7V 2-Way Monitors, SSL2 2-Channel Audio Interface, Phillips SHP9500 Open-Back Headphones, SM-58 Switch Dynamic Mic, MXL 990 Large Diaphragm Condenser Mic, MXL 991 Small Diaphragm Condenser Mic, Ovation Acoustic Guitar, Memphis Japanese P-Bass Copy w/ Lollar Overwound Pickups, Ventura Stratocaster Copy w/ DiMarzio Super Distortions, Greco Les Pau Standardl Copy with DiMarzio Super Distortions, Univox Les Paul Junior Copy with P90. Click down below to view a Spotify playlist of artists I've worked with and produced!
                     </p>
                     <div className={classes.buttonBox}>
-                        <Link className={classes.downloadLink} exact to={{ pathname: 'https://open.spotify.com/playlist/01Fcn43s13W6etdhxkia4x?si=c46a112b42db494a' }} target="_blank">See Past Work</Link>
+                        <Link className={classes.downloadLink} exact to={{ pathname: 'https://open.spotify.com/playlist/1LHSyhNVqf9DUHaRU6yrTL?si=892044864f2c47b7' }} target="_blank">See Past Work</Link>
                     </div>
 
                 </div>

@@ -33,13 +33,13 @@ export default function HomePage () {
         <p className={classes.paragraph}>Technology professional with a passion for software development supported by 6+ years of client/customer service.
           <br></br>
           <br></br>
-          Pivoting from a 3-year career in corporate audio engineering, I discovered my passion for the computer and software technologies that integrate within event-work to ensure a successful production.After studying hard and recently acquiring my Cisco CCNA certification, I enrolled as a student at NPower, a national non-profit aiming to jump start IT careers for young adults and military veterans.
+          Pivoting from a 3-year career in corporate audio engineering, I discovered my passion for the computer and software technologies that integrate within event-work to ensure a successful production. After studying hard and recently acquiring my Cisco CCNA certification, I enrolled as a student at NPower, a national non-profit aiming to jump start IT careers for young adults and military veterans.
           <br></br>
           <br></br>
-          After the program I started a position as a Desktop Support Engineer at New York-based managed service provider, S7 Technology Group, performing end-user level support for corporate Windows environments.While doing so I also discovered my love for coding and application development.
+          After the program I started a position as a Desktop Support Engineer at New York-based managed service provider, S7 Technology Group, performing end-user level support for corporate Windows environments. While doing so I also discovered my love for coding and application development.
           <br></br>
           <br></br>
-          Soon after, I decided to study full-time on technologies such as HTML5, CSS3, JavaScript, React/Hooks, NodeJS, MongoDB, Express, MaterialUI and Bootstrap. I'm currently still in the middle of studies, while building my own applications/websites and building upon my skills in React. I'm also creating and playing a ton of music in my free time!</p>
+          Soon after, I decided to study full-time on technologies such as HTML5, CSS3, JavaScript, React/Hooks, NodeJS, MongoDB, Express, MaterialUI and Bootstrap. I'm currently building my own applications/websites and building upon my skills in React. I'm also creating and playing a ton of music in my free time!</p>
       </div>
       <hr className={classes.hr} />
       <div className={classes.cardContainer}>
