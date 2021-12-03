@@ -31,4 +31,11 @@ module.exports = {
         filename: 'bundle.js'
     },
     plugins: [new webpack.HotModuleReplacementPlugin()],
+    devServer: {
+        historyApiFallback: true,
+        contentBase: path.resolve(__dirname, './dist'),
+        hot: true,
+        open: true,
+        port: 3000
+    },
 };
