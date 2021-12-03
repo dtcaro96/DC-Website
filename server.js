@@ -7,7 +7,12 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.set('port', process.env.PORT || 3000);
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'dist', 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, './dist/index.html'),
+        function (err) {
+            if (err) {
+                res.status(500).send(err)
+            }
+        })
 })
 
 const server = app.listen(app.get('port'), function () {
