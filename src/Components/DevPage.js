@@ -43,7 +43,7 @@ export default function DevPage () {
                     <img className={classes.reactLogo} src='pics\Bootstrap_Logo.png' />
                     <img className={classes.reactLogo} src='pics\MUI_Logo.png' />
                 </div>
-                <Link className={classes.downloadLink} exact to={{ pathname: 'https://drive.google.com/file/d/1C42s-Wwf2FEMjNQUyQuPnrptapJqGpsV/view?usp=sharing' }} target="_blank">See Resume</Link>
+                <Link className={classes.downloadLink} exact to={{ pathname: 'https://docs.google.com/document/d/1Btz-oFDykbRCy8W6djzJDk_0hxHzg-LF6p-F9huIeSA/edit?usp=sharing' }} target="_blank">See Resume</Link>
             </div>
         </div>
     )
